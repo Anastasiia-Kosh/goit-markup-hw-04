@@ -67,7 +67,7 @@ a {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #4d5ae5;
+  color: #404bbf;
   margin-right: 76px;
 }
 
@@ -162,7 +162,6 @@ a {
   padding-top: 188px;
   background-color: #2e2f42;
   background-image: linear-gradient(
-      to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
@@ -291,12 +290,12 @@ a {
 .our-team-four-cards-social {
   width: 40px;
   height: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-our-team:hover,
-link-our-team:focus {
+.link-our-team:focus {
   background-color: #404bbf;
 }
+
 .link-our-team {
   width: 100%;
   height: 100%;
@@ -305,6 +304,7 @@ link-our-team:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-team-four-cards-social .icon {
@@ -351,33 +351,30 @@ link-our-team:focus {
   border: 1px solid #e7e9fc;
   border-top: none;
 }
-
+.portfolio-card-set {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+  cursor: pointer;
+}
 .portfolio-card {
   display: block;
   background: #fff;
   width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
+}
+
+.portfolio-card-picture:hover {
+  transform: translatey(0);
 }
 .portfolio-card:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
-
-.portfolio-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 300px;
-  background-color: #4d5ae5;
-  transform: translatey(170%);
+.portfolio-card-picture {
+  position: relative;
   overflow: hidden;
-  transition: transform 250ms ease-in-out;
-}
-
-.portfolio-card:hover .portfolio-overlay {
-  transform: translatey(0);
 }
 
 .portfolio-overlay-text {
@@ -387,17 +384,14 @@ link-our-team:focus {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
-.portfolio-card-set {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 48px;
-  column-gap: 24px;
-  cursor: pointer;
+  padding: 40px 32px;
+  position: absolute;
+  top: 0;
+  background-color: #4d5ae5;
+  transform: translateY(100%);
+  width: 100%;
+  height: 100%;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logoend {
@@ -435,7 +429,6 @@ link-our-team:focus {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-footer:hover,
@@ -450,6 +443,7 @@ link-our-team:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-footer .icon {
